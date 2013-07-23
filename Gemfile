@@ -36,3 +36,11 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+# Testing
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+end
+
+gem 'nokogiri', '1.5.9'
