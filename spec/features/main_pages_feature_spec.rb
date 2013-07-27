@@ -26,5 +26,16 @@ feature "navigating menu" do
     click_link "home_link"
     current_path.should == "/main_pages/home"
   end
+  scenario "User should see the home menu selected when visiting the home page" do
+    visit main_pages_home_path
+    expect(page).to have_css('li.pure-menu-selected:contains("Home")')
+  end
+  scenario "User should see the blogs menu selected when visiting the blogs page" do
+    visit main_pages_blogs_path
+    expect(page).to have_css('li.pure-menu-selected:contains("Blogs")')
+  end
+  scenario "User should see the about menu selected when visiting the about page" do
+    visit main_pages_about_path
+    expect(page).to have_css('li.pure-menu-selected:contains("About")')
+  end
 end
-    
