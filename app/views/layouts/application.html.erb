@@ -9,7 +9,9 @@
 <body>
 <div class="pure-g-r">
 <div class="pure-u-1">
+<% if params[:controller] != "blogs" %>
 <%= render "menu" %>
+<% end %>
 
 <%= yield %>
 </div>

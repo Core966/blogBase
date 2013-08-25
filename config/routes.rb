@@ -1,4 +1,7 @@
 BlogBase::Application.routes.draw do
+  resources :blogs
+
+
   get "main_pages/home"
 
   get "main_pages/blogs"
